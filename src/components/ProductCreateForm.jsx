@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import { GeneralContext } from "../contexts/GeneralContext";
 
-const ProductCreateFrom = ({ addProduct }) => {
+const ProductCreateFrom = () => {
+  const { addProduct } = useContext(GeneralContext);
   const nameRef = useRef("");
   const priceRef = useRef("");
 
